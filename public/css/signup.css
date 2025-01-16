@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 900;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+  width: 100%;
+  height: 100vh;
+  background: url('../images/ecommerce-bk1.jpg') no-repeat ;
+  background-size: cover;
+  background-position: center;
+}
+
+.form-control {
+  position: relative;
+  width: 400px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+}
+
+h2 {
+  font-size: 1.5cm;
+  color: #262626;
+  text-align: center;
+  margin-left: 15px;
+}
+
+.main-logo {
+  width: 70px;
+  height: 20px;
+  background-color: antiquewhite;
+  transition: transform 0.7s ease-in-out;
+}
+
+.main-logo:hover {
+  transform: rotate(360deg);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.input-box {
+  position: relative;
+  width: 310px;
+  margin: 20px 0;
+  border-bottom: 2px solid white;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #262626;
+  pointer-events: none;
+  font-weight: 900;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #fff;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  color: #262626;
+  font-size: 1.2em;
+  line-height: 57px;
+}
+
+.remember-forget {
+  margin: -15px 0 15px;
+  font-size: 0.9em;
+  color: #262626;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forget label input {
+  margin-right: 3px;
+}
+
+.remember-forget a {
+  color: #262626;
+  text-decoration: none;
+}
+
+.remember-forget a:hover {
+  text-decoration: underline;
+}
+
+button {
+  border: none;
+  padding: 3px;
+  margin: 5px 0 10px 0;
+  width: 100%;
+  height: px;
+  background-color: #fff;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  color: black;
+}
+
+button:hover {
+  background-color: antiquewhite;
+}
+
+.register-link {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9em;
+  color: #262626;
+  font-weight: 900;
+  text-align: center;
+  margin: 15px 0 10px;
+}
+
+.register-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+  color: #262626;
+}
+
+@media (max-width: 500px) {
+  .form-control {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    border-radius: 0%;
+  }
+}

@@ -1,0 +1,136 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    
+    font-family:sans-serif;
+    height:100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.first{
+    
+        display: flex;
+        background-image: url(../public/login3.jpeg);
+       backdrop-filter: blur(8px); 
+    
+}
+
+
+
+
+
+.logo{
+    display:flex;
+    font-weight:lighter;
+    width: 50%;
+    height: 70px;
+    
+}
+
+.sidebar{
+    padding: 40px;
+}
+
+
+.main img{
+  
+    margin-top: 70px;
+    margin-left: 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+ }
+h2{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+h4{
+    padding-top:50px ;
+    font-size:50px;
+}
+
+h6{
+    font-size: 20px;
+    padding-top: 5%;
+}
+
+button{
+    margin-top: 30px;
+    margin-left: 130px;
+    background-color :rgb(44, 44, 47);
+    filter: blur(-12px);
+    color: rgb(208, 154, 53) ;
+/* -webkit-filter: blur(100px); */
+
+    
+}
+
+button:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: black;
+}
+
+
+
+
+
+
+
+.group-box{
+    background-color:wheat;
+    display: grid;
+    grid-template-columns:repeat( 2, 1fr);
+    grid-template-rows: repeat(2,auto);
+    /* grid-auto-rows: minmax(100px,auto); */
+    margin: 10px;
+
+    box-shadow: rgba(208, 198, 110, 0.25) 0px 50px 100px -20px, rgba(208, 198, 110, 0.25) 0px 30px 60px -30px, rgba(208, 198, 110, 0.25) 0px -2px 6px 0px inset;
+
+}
+
+.goods{
+    padding: 10px;
+    margin: 0%;
+    overflow: hidden;
+
+}
+
+.goods img{
+    width: 150px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.goods h1{
+    text-decoration: underline;
+    margin: 10%;
+}
+
+footer{
+    background-color: #262626;
+    
+}
+
+.foot{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px 30px;
+}
+
+li{
+    color: #F2E399;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+footer p{
+    
+    text-align: center;
+    color: #F2E399 ;
+    padding: 40px 5px;
+}

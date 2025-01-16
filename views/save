@@ -1,0 +1,30 @@
+
+ <script>
+    // Get items array from server
+    const items = products;
+    let startIndex = 0;
+    const container = document.getElementById('group-box');
+
+    function updateCards() {
+      container.innerHTML = ''; // Clear previous cards
+
+      // Display next 4 items
+      for (let i = 0; i < 4; i++) {
+        const item = items[(startIndex + i) % items.length];
+        container.innerHTML += `
+          <div class="goods">
+             <h1>${product.title}<h1>
+            <img src="${product.image}" alt="${product.name} image">
+              <h3>${product.name}</h3>
+              <h5>${product.price}<h5>
+            </div>
+          </div>
+        `;
+      }
+
+      startIndex = (startIndex + 4) % items.length;
+    }
+
+    // Rotate cards every 3 seconds
+    if (items.length > 0) setInterval(updateCards, 3000);
+  </script>

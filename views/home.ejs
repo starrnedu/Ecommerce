@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <%- include('./components/header') %>
+
+    <div class="slideshow-con">
+      <div class="slideshow"></div>
+    </div>
+    <div class="categories-con">
+      <div class="category">Clothes</div>
+      <div class="category">Kitchen</div>
+      <div class="category">Bedroom</div>
+      <div class="category">Outdoor</div>
+      <div class="category">Shoes</div>
+      <div class="category">Clothes</div>
+      <div class="category">Kitchen</div>
+      <div class="category">Bedroom</div>
+      <div class="category">Outdoor</div>
+      <div class="category">Shoes</div>
+    </div>
+    <h3 id="top">Amazing Offers To Celebrate Christmas for you</h3>
+    <section>
+      <div class="group-box" id="card-container">
+        <% for (let i = 0; i < products.length; i += 4) { %>
+        <div class="goods">
+          <% products.slice(i, i + 4).forEach(product => { %>
+          <div class="goods-content">
+            <h1><%= product.title %></h1>
+            <img src="<%= product.image %>" alt="<%= product.name%>" />
+            <h2><%= product.name%></h2>
+            <h5>Price #<%= product.price%></h5>
+            <div class="special-btn">
+              <button class="add-btn">
+                <ion-icon name="add-circle"></ion-icon>
+              </button>
+              <h6 id="num">0</h6>
+              <button class="minus-btn">
+                <ion-icon name="remove"></ion-icon>
+              </button>
+            </div>
+
+            <button>Cart <ion-icon name="cart"></ion-icon></button>
+          </div>
+          <% }) %>
+        </div>
+        <% } %>
+        <button id="seeMoreBtn">See More</button>
+      </div>
+    </section>
+
+    <div class="marque">
+      <p id="move"></p>
+    </div>
+
+    <div class="marque">
+      <p id="move">
+        Hello, hope you were satisfied. if you are not satisfied youy can use
+        other of our servics
+      </p>
+    </div>
+
+    <%- include('./components/footer')%>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js">
+    
+
+       let counter = 0;
+
+      const addBtn = document.getElementById("add-btn");
+      const subBtn = document.getElementById ("minus-btn");
+      const counts = document.getElementById ("num");
+
+    button.addEventListener('click', ()=>{
+          counter++;
+          counts.textContent = counter;
+          console.log( counter)
+
+      });
+
+
+      const productName= document.getElementsByTagName("h2");
+      const productImage= document.getElementsByTagName("img");
+      const productQuantity= document.getElementsByTagName("h6");
+      const productPrice= document.getElementsByTagName("h5");
+
+      console.log( productName, productImage, productQuantity, productPrice);
+
+    </script>
+  </body>
+</html>

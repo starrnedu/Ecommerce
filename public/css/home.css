@@ -1,0 +1,275 @@
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  background-color: #262626;
+  width: 100%;
+}
+
+a {
+  align-items: center;
+  color: #f2e399;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.entry {
+  display: flex;
+}
+.slideshow-con {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  border: 2px solid #ddd;
+}
+
+.slideshow,
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideshow {
+  background-image: url("../images/ai1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 5s;
+  animation-play-state: running;
+  animation: change 30s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes change {
+  0% {
+    background-image: url(../images/a-magical-waterfall-in-a-wonderfully-fantastic-flowering-landscape-banner-made-with-generative-ai-photo.jpg);
+  }
+  20% {
+    background-image: url(../images/ai1.jpg);
+  }
+  40% {
+    background-image: url(../images/ai2.jpg);
+  }
+  60% {
+    background-image: url(../images/ai5.webp);
+  }
+  80% {
+    background-image: url(../images/landimg2.jpg!bw700);
+  }
+  100% {
+    background-image: url(../images/landimg1.jpg!sw800);
+  }
+}
+
+.categories-con {
+  display: flex;
+  padding: 20px;
+  margin: 50px;
+}
+.category {
+  padding: 10px;
+  border: 2px solid #f2e399;
+  margin: 10px;
+}
+.category:hover {
+  background-color: #f2e399;
+}
+section {
+  background-color: #dddbcd;
+  padding: 10px;
+}
+
+.group-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+  gap: 5px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  margin: 0%, 10px;
+}
+
+.goods-content {
+  display: grid;
+  place-items: center;
+  padding: 5px;
+  height: 250px;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 8px;
+  width: 380px;
+
+  color: #262626;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.goods-content:nth-child(odd) {
+  background-color: rgb(245, 241, 239);
+  box-shadow: 0 45px 65px rgba(0, 0, 0, 0.5), 0 35px 22px rgba(0, 0, 0, 0.16);
+}
+
+.goods img {
+  width: 90px;
+  height: 70px;
+  overflow: hidden;
+  mix-blend-mode: darken;
+  image-rendering: optimizeQuality;
+  animation: none;
+}
+
+/* .goods img:hover {
+  width: 60px;
+  height: 40px;
+} */
+
+button:hover {
+  animation: shake 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.special-btn {
+  display: flex; /* Keep the container flexible if necessary for layout */
+  justify-content: space-between; /* Adjust space between children if needed */
+  align-items: center; /* Align items vertically */
+}
+
+.special-btn button,
+.special-btn h6 {
+  display: block; /* Ensure these elements remain block-level */
+  margin:7px;
+}
+#seeMoreBtn {
+  float: right;
+  margin: 30px;
+  width: 70px;
+  height: 40px;
+  overflow: hidden;
+}
+
+button {
+  width: 50px;
+  height: 20px;
+  text-align: center;
+  text-justify: kashida;
+  font-weight: 700;
+}
+h1:hover {
+  color: darkkhaki;
+  padding-bottom: 10px;
+}
+
+h3:hover {
+  color: darkkhaki;
+  padding-top: 10px;
+}
+
+h5:hover {
+  color: darkkhaki;
+  padding-top: 10px;
+}
+.marque {
+  width: 100%;
+  line-height: 50px;
+  background-color: whitesmoke;
+  color: #262626;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#move {
+  display: inline-block;
+  padding-left: 100%;
+  color: red;
+  font-weight: 700;
+  padding-bottom: 30px;
+  transition: transform 10s ease-in-out;
+  animation: marquee 40s linear infinite;
+}
+#top {
+  color: red;
+  font-weight: 700;
+  padding-bottom: 30px;
+  transition: transform 10s ease-in-out;
+  animation: marquee 40s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+footer {
+  background-color: #262626;
+}
+
+.foot {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 15px 30px;
+}
+
+li {
+  color: #f2e399;
+  text-decoration: none;
+  list-style: none;
+}
+
+footer p {
+  text-align: center;
+  color: #f2e399;
+  padding: 40px 5px;
+}
